@@ -1,0 +1,31 @@
+# 1. Ignore specific files
+secrets.env
+credentials.json
+
+# 2. Ignore all files with a specific extension (Wildcards)
+*.log
+*.tmp
+*.exe
+
+# 3. Ignore entire directories/folders (Must end with a slash)
+node_modules/
+dist/
+build/
+.idea/
+.vscode/
+
+# 4. Pattern matching examples
+output_*.txt    # Ignores output_01.txt, output_final.txt, etc.
+
+# 5. Make an exception (Negation using !)
+!important.log  # Do NOT ignore important.log, even though *.log is blocked above
+
+# 6. Ignore files in a specific folder but not its subfolders
+logs/*.log      # Ignores logs/error.log, but NOT logs/debug/error.log
+
+# macOS System Files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
